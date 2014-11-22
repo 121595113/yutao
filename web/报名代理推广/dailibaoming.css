@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	text-decoration:none;
+	list-style:none;
+	font-family:Arial,'微软雅黑';
+	font-weight:normal;
+	font-size:16px;
+	}
+body{
+	background:#f5f8fa;}
+/*页头*/
+header{
+	background:#31BE5A;
+	text-align:center;
+	overflow:hidden;}
+header div{
+	width:1000px;
+	margin:0 auto;
+	text-align:left;
+	padding:16px 0;
+	overflow:hidden;
+	}
+header img{
+	float:left;}
+header div *{
+	display:inline-block;}
+header div h1{
+	line-height:50px;
+	margin-left:30px;
+	font-size:20px;
+	color:#FFF;}
+/*页面主要内容*/
+section{
+	width:1000px;
+	margin:0 auto 40px auto;
+	min-height:800px;
+	overflow:hidden;
+	}
+section p{
+	line-height:30px;
+	margin:40px 0;
+	color:#7c7c7c;}
+/*表格通用*/
+section table{
+	border-collapse:collapse;
+	background:#FFF;}
+table.biao1 tbody tr td{
+	padding-right:20px;}
+/*表格1样式*/	
+section .biao1{
+	width:99.9%}
+.biao1 thead tr{
+	background:#e6e6e6;
+	border:#e6e6e6 1px solid;
+	border-bottom:none;
+	line-height:50px;
+	color:#4c4c4c;
+	text-align:left;}
+.biao1 thead tr th:first-child{
+	padding-left:20px;}
+.biao1 tbody tr td:first-child{
+	padding-left:20px;}
+.biao1 tbody tr td{
+	padding:20px 0;
+	}
+.biao1 tbody tr{
+	border:#e6e6e6 1px solid;
+	border-top:none;
+	font-size:14px;
+	color:#4c4c4c;}
+/*页码样式*/
+.yema{
+	line-height:50px;
+	background:#FFF;
+	border:#e6e6e6 1px solid;
+	border-top:none;
+	}
+.yema *{
+	display:inline-block;}
+.yema ul{
+	float:right;
+	margin-right:20px;
+	}
+.yema span{
+	font-size:14px;
+	color:#4c4c4c;
+	margin-left:20px;}
+.yema li a{
+	width:28px;
+	}
+.yema li a.active{
+	background-color:#30BE5A;
+	border:#30BE5A 1px solid;
+	color:#FFF;}
+.yema li a:hover{}
+.yema li *{
+	cursor:pointer;
+	line-height:28px;
+	border:#e6e6e6 1px solid;
+	text-align:center;
+	border-radius:2px;
+	font-size:14px;
+	color:#4c4c4c;
+	background-color:#FFF;}
+.yema li button{
+	width:60px;
+	}
+.yema li button:active{
+	background:#e6e6e6;
+	}

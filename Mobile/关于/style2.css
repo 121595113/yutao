@@ -1,0 +1,43 @@
+/* CSS Document */
+*{
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin:0;
+	padding:0;}
+body{
+	background-color:#F2F2F2;}
+.ui-content{
+	padding:0 30px;
+	width:580px;
+	margin:0 auto;}
+h1{
+	font-size:44px;
+	color:#333333;
+	margin:10px 0;}
+h2{
+	font-size:30px;
+	color:#333333;
+	line-height:50px;
+	}
+.titlebox ul{
+	font-size:30px;
+	color:#666666;
+	line-height:50px;
+	}
+.titlebox ul li{
+	margin-left:32px;}
+.logo{
+	text-align:center;
+	padding-top:50px;
+	margin-bottom:60px;}
+.logo label{
+	display:block;
+	text-align:center;
+	font-size:30px;
+	color:#666666;
+	margin-top:32px;}
+.titlebox{
+	padding-bottom:20px;}
+.titlebox p{
+	font-size:30px;
+	color:#666666;
+	padding-bottom:10px;}

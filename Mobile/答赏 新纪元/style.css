@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	text-decoration:none;
+	list-style:none;
+	font-family:"Microsoft Yahei",sans-serif;
+	font-weight:normal;
+	}
+body{
+	background:#091531;}
+.a{
+	width:640px;
+	margin:0 auto;
+	text-align:center;
+	position:relative;}
+.float{
+	position:absolute;
+	right:166px;}
+.float a{
+	position:fixed;
+	top:400px;}
+.a>dd{
+	background:url(images/line.png) center bottom no-repeat;
+	}
+.a>dd ul li{
+	display:inline-block;
+	padding:0 20px;}
+.a>dd h1{
+	color:#FFF;
+	font-size:28px;
+	margin-top:40px;
+	margin-bottom:20px;}
+.a>dd ul li dt{
+	color:#FFF;
+	font-size:36px;}
+.a>dd ul li dd{
+	color:#b2b2b2;
+	font-size:26px;
+	margin-bottom:30px;}
+.a>dd ul li:first-child dl{
+	text-align:right;
+	}
+.a>dd ul li:last-child dl{
+	text-align:left;
+	}
+.a>dd:last-child{
+	background-image:none;}
+p{
+	font-size:26px;
+	color:#FFF;
+	line-height:50px;}
+span{
+	color:#ff6800;
+	}

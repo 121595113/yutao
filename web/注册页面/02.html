@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>提交报名</title>
+<link href="layout_2.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+	if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
+		var version = parseFloat(RegExp.$1);
+		if(version>2.3){
+			var phoneScale = parseInt(window.screen.width)/640;
+			document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+		}else{
+			document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+		}
+	}else{
+		document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	}
+	</script>
+</head>
+
+<body>
+<header>
+</header>
+<section>
+<ul class="second">
+<h3>请填写本人真实信息，才能获得入场资格</h3>
+<li><h4>姓名</h4><input type="text"></li>
+<li><h4>年龄</h4><input type="text"></li>
+<li><h4>讲师／咨询年限</h4><select>
+    <option>请选择</option>
+    <option>请选择</option>
+    <option>请选择</option>
+    <option>请选择</option>
+    <option>请选择</option>
+    <option>请选择</option>
+</select></li>
+<li><h4>所在单位</h4><input type="text"></li>
+<li><h4>擅长领域（1-3项）</h4>
+<ul class="checkbox">
+<li><input type="checkbox" value="商业模式">商业模式</li>
+<li><input type="checkbox"  class="txt_style" value="市场营销">
+市场营销
+</li>
+<li><input type="checkbox" value="人力资源<">
+人力资源</li>
+<li><input type="checkbox" value="财务资本">
+财务资本</li>
+<li><input type="checkbox" value="互联网">
+互联网</li>
+<li><input type="checkbox" value="生产研发">
+生产研发</li>
+<li><input type="checkbox" value="创业">
+创业</li>
+<li><input type="checkbox" value="修炼成长">
+修炼成长</li>
+
+</ul></li>
+<li><h4>课程名称/咨询主题</h4><input type="text"></li>
+<li><h4>你想怎么参与答赏会师大会</h4>
+<ul class="radio">
+<li><input type="radio"   value="现场参见">
+现场参见</li>
+<li><input type="radio"  value="网络观看直播">
+网络观看直播</li>
+</ul></li>
+
+<li><button>提交报名</button></li>
+</ul>
+</section>
+</body>
+</html>

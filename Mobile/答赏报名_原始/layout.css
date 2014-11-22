@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	text-decoration:none;
+	list-style:none;
+	font-family:Arial,"Microsoft YaHei";
+	font-weight:normal;
+	}
+header{
+	height:220px;
+	background:url(images/yetou.png) no-repeat center #31BE5A;}
+header a{
+	position:absolute;
+	left:2.5%;
+	top:23px;
+	line-height:45px;
+	color:#FFF;
+	font-size:34px;
+	padding-left:36px;
+	background:url(images/back_icon.png) no-repeat left center;}
+header h1{
+	line-height:88px;
+	text-align:center;
+	font-size:40px;
+	color:#FFF;}
+section{
+	width:95%;
+	margin:0 auto;}
+section h2{
+	margin-top:40px;
+	color:#808080;
+	font-size:32px;}
+section .first li{
+	margin-top:60px;
+	overflow:hidden;
+	border-radius:8px;
+	border:1px #cccccc solid;
+	}
+section .first li input,section .second li input{
+	width:100%;
+	height:88px;
+	font-size:32px;
+	border:none;
+	}
+section .first li:nth-child(2) input{
+	width:50%;
+	float:left;}
+section .first li:last-child input[type=button],section .second li:last-child input[type=button]{
+	background:url(images/jianbian.png) repeat-x;
+	border:none;
+	color:#FFF;
+	}
+.txt_style{
+	color:#333333;
+	text-indent:20px;}
+section .first li:nth-child(2) input:last-child{
+	background:url(images/shoujiyanzheng.png) bottom;
+	border:none;
+	border-left:1px #cccccc solid;
+	color:#32be5a;
+}
+section p{
+	font-size:28px;
+	color:#808080;
+	margin-top:180px;
+	text-align:center;
+	}
+section img{
+	display:block;
+	margin:0 auto;
+	}
+section p span{
+	font-size:48px;
+	color:#32be5a;}
+
+section .second li input{
+	border:1px #cccccc solid;
+	border-radius:8px;
+	}
+section h3{
+	font-size:30px;
+	color:#32be5a;
+	margin-top:40px;
+	}
+section h4{
+	font-size:32px;
+	color:#4c4c4c;
+	margin-top:40px;
+	margin-bottom:20px;}
+section .second li ul{
+	overflow:hidden;}
+section .second li ul li{
+	width:30%;
+	float:left;
+	line-height:40px;
+	font-size:24px;
+	height:60px;
+	}
+section .second li ul li input[type=checkbox]{
+	width:40px;
+	height:40px;
+	float:left;
+	display:block;
+	margin-right:10px;
+	-webkit-appearance:textfield;
+	}
+.abc{
+	width:40px;
+	height:40px;
+	float:left;
+	display:block;
+	margin-right:10px;
+	background:url(images/xuanzhong.png) no-repeat center;
+	}
+section select{
+	width:100%;
+	height:88px;
+	background:none;
+	font-size:32px;
+	border:1px #cccccc solid;
+	text-indent:20px;}
+	
+	
+section .second li ul li input[type=radio]{
+	width:39px;
+	height:39px;
+	float:left;
+	display:block;
+	margin-right:10px;
+	-webkit-appearance:textfield;
+	background-color:#FFF;
+	}
+section ul li:last-child{
+	margin-bottom:40px;}
+input[type=radio]:checked,input[type=checkbox]:checked{
+	background:url(images/xuanzhong.png) no-repeat center #FFFFFF;}
+
+
+
+
+
+

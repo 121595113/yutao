@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	text-decoration:none;
+	list-style:none;
+	font-family:Arial,'微软雅黑';
+	font-weight:normal;
+	color:#808080;
+	}
+body{
+	text-align:center;}
+ul{
+	display:inline-block;
+	width:640px;
+	margin-bottom:50px;
+	}
+ul li{
+	display:block;
+	}	
+li.a1 p{
+	color:#000000;
+	line-height:40px;
+	margin-top:40px;
+	margin-bottom:20px;}
+.a h1,.c p,li.a1 p{
+	font-size:28px}
+.a h1{
+	color:#000000;
+	}
+.a h2{
+	color:#000000;
+	font-size:48px;
+	background:url(images/tanhao.png) center bottom no-repeat;
+	padding-bottom:70px;
+	font-weight:bold;
+	margin-top:10px;
+	margin-bottom:30px;}
+.c h1{
+	font-size:32px;
+	color:#000000;
+	margin-top:20px;
+	margin-bottom:15px;
+	font-weight:bold;}
+.c p{
+	line-height:32px;
+	color:#000000;
+	font-weight:lighter;
+	margin-bottom:30px;}
+.d{
+	padding-top:37px;}
+.d h1{
+	font-size:30px;
+	color:#000;
+	margin:20px 0;}
+.d p{
+	font-size:30px;
+	color:#000;
+	line-height:50px;}	
+.d p span{
+	font-size:40px;
+	color:#32be5a;
+	}	
+	
+	
+	

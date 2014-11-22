@@ -1,0 +1,315 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.6, minimum-scale=0.6, maximum-scale=0.6, user-scalable=no"><!---->
+<title>报名答赏会师大典</title>
+<!--<script src="newjquery.js"></script>
+--><script src="http://admin.das18.com/js/jquery.js" type="text/javascript"></script>
+<script src="http://admin.das18.com/js/jQueryFormPlugin.js" type="text/javascript"></script>
+<script type="text/javascript" src="messenger.js"></script>
+<script type="text/javascript" src="messenger.min.js"></script>
+<script type="text/javascript" src="messenger-theme-flat.js"></script>
+<script type="text/javascript" src="messenger-theme-future.js"></script>
+<!--<script>
+$(function(){
+	$("input[type=checkbox]").toggle(function(){
+	$(this).addClass('abcd')
+	},function(){
+		$(this).removeClass('abcd')
+		})
+	})
+$(function(){
+	$("input[type=radio]").click(function(){
+		$("input[type=radio]").removeClass('abcd')
+		$(this).addClass('abcd')
+		})	
+	})
+</script>
+--><script type="text/javascript">
+	if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
+		var version = parseFloat(RegExp.$1);
+		if(version>2.3){
+			var phoneScale = parseInt(window.screen.width)/640;
+			document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+		}else{
+			document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+		}
+	}else{
+		document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	}
+	</script>
+<link href="layout.css" rel="stylesheet" type="text/css">
+<link href="css/messenger.css" rel="stylesheet" type="text/css">
+<link href="css/messenger-spinner.css" rel="stylesheet" type="text/css">
+<link href="css/messenger-theme-air.css" rel="stylesheet" type="text/css">
+<link href="css/messenger-theme-block.css" rel="stylesheet" type="text/css">
+<link href="css/messenger-theme-flat.css" rel="stylesheet" type="text/css">
+<link href="css/messenger-theme-future.css" rel="stylesheet" type="text/css">
+<link href="css/messenger-theme-ice.css" rel="stylesheet" type="text/css">
+<script language="JavaScript">
+	$(document).ready(function(){
+		var options = { 
+	        beforeSubmit:  request,
+	        url:"",
+	        type:'POST',
+	        dataType: 'json',
+	        success:function(data){
+	        	if(data.status=="true"){
+	        		window.location.href = data.data;
+	        	}else{
+	        		alert(data.msg);
+	        	}
+	        }
+	    }; 
+	    $('#myForm').ajaxForm(options);
+	});
+Messenger.options = {
+    extraClasses: 'messenger-fixed  messenger-on-top',
+    maxMessages: 1,
+     theme: 'flat'
+}
+	function request(){
+		var name = $.trim($("#name").val());
+
+
+
+
+
+		if(name==''){
+var msg;
+msg = Messenger().post({
+  message: '请输入姓名',
+  type: 'info',
+  hideAfter: 1,
+  actions: {
+
+  }
+});
+		//	alert('请输入姓名');
+			return false;
+		}
+		
+		if(name.length>10 || name.length<2){
+			var msg;
+			msg = Messenger().post({
+			  message: '姓名请控制在2-10个字',
+			  type: 'info',
+
+			  actions: {
+			
+			  }
+			});
+		//	alert('姓名请控制在2-10个字');
+			return false;
+		}
+		
+		
+		var age = parseInt($("#age").val());
+		if(isNaN(age)){
+			var msg;
+			msg = Messenger().post({
+			  message: '年龄请填写数字格式，如：36',
+			  type: 'info',
+			  hideAfter: 5,
+			  actions: {
+			
+			  }
+			});
+//			alert('年龄请填写数字格式，如：36');
+			return false;
+		}
+		if(age<=10 || age>=100){
+//			alert('年龄请填写数字格式，如：36');
+			var msg;
+			msg = Messenger().post({
+			  message: '年龄请填写数字格式，如：36',
+			  type: 'info',
+			  hideAfter: 1,
+			  actions: {
+			
+			  }
+			});
+			return false;
+		}
+		var experience = parseInt($("#experience:checked").val());
+		if(experience==0){
+//			alert('请选择从事讲师/咨询师年限');
+			var msg;
+			msg = Messenger().post({
+			  message: '请选择从事讲师/咨询师年限',
+			  type: 'info',
+			  hideAfter: 1,
+			  actions: {
+			
+			  }
+			});
+			return false;
+		}
+		var org = $.trim($("#org").val());
+		if(org==''){
+//			alert('请输入所在单位');
+			var msg;
+			msg = Messenger().post({
+			  message: '请输入所在单位',
+			  type: 'info',
+			  hideAfter: 1,
+			  actions: {
+			
+			  }
+			});
+			return false;
+		}
+		if(org.length>10 || org.length<2){
+//			alert('所在公司请控制在2-10个字');
+			var msg;
+			msg = Messenger().post({
+			  message: '所在公司请控制在2-10个字',
+			  type: 'info',
+			  hideAfter: 1,
+			  actions: {
+			
+			  }
+			});
+			return false;
+		}
+
+		var returnInd = $("input[name='professional_field[]']:checked").length;
+		if(returnInd<=0){
+//			alert('请选择专场领域');
+			var msg;
+			msg = Messenger().post({
+			  message: '请选择专场领域',
+			  type: 'info',
+			  hideAfter: 1,
+			  actions: {
+			
+			  }
+			});
+			return false;
+		}
+		if(returnInd>3){
+//			alert('专场领域最多3项');
+			var msg;
+			msg = Messenger().post({
+			  message: '专场领域最多3项',
+			  type: 'info',
+			  hideAfter: 3,
+			  actions: {
+			
+			  }
+			});
+			return false;
+		}
+		
+		
+		var title = $.trim($("#title").val());
+		console.log(title);
+		if(title==''){
+//			alert('请输入课程名称/咨询主题');
+			var msg;
+			msg = Messenger().post({
+			  message: '请输入课程名称/咨询主题',
+			  type: 'info',
+			  hideAfter: 1,
+			  actions: {
+			
+			  }
+			});
+			return false;
+		}
+		console.log(title.length);
+		if(title.length>20 || title.length<2){
+//			alert('课程名称/咨询主题请控制在2-20个字');
+			var msg;
+			msg = Messenger().post({
+			  message: '课程名称/咨询主题请控制在2-20个字',
+			  type: 'info',
+			  hideAfter: 1,
+			  actions: {
+			
+			  }
+			});
+			return false;
+		}
+		
+		var returnWay = $("input[name='join_meeting[]']:checked").val();
+		if(returnWay<=0){
+//			alert('请选择你想如何参与答赏会师大会');
+			var msg;
+			msg = Messenger().post({
+			  message: '请选择你想如何参与答赏会师大会',
+			  type: 'info',
+			  hideAfter: 1,
+			  actions: {
+			
+			  }
+			});
+			return false;
+		}
+	}
+ </script>
+</head>
+
+ <body>
+  <header> 
+   <!---<a href="http://admin.das18.com/index.php/reg/index">返回</a> 
+   <h1>报名答赏会师大会</h1>-->
+  </header> 
+  <form id="myForm" action="javascript:;">
+  <section> 
+   <h3>请填真实信息，才能获得入场资格</h3> 
+   <ul class="second"> 
+    <li><h4>姓名</h4><input type="text" name="name" class="txt_style" id="name"  /></li> 
+    <li><h4>年龄</h4><input type="text" name="age" class="txt_style" id="age"  /></li>
+    <li><h4>讲师／咨询年限</h4>
+    	<select name="service_length" id="experience">
+<option value="-1">请选择</option>
+<option value="1">1年</option>
+<option value="2">2年</option>
+<option value="3">3年</option>
+<option value="4">4年</option>
+<option value="5">5年</option>
+<option value="6">6年</option>
+<option value="7">7年</option>
+<option value="8">8年</option>
+<option value="9">9年</option>
+<option value="10">10年</option>
+<option value="11">11年</option>
+<option value="12">12年</option>
+<option value="13">13年</option>
+<option value="14">14年</option>
+<option value="15">15年</option>
+<option value="16">16年</option>
+<option value="17">17年</option>
+<option value="18">18年</option>
+<option value="19">19年</option>
+<option value="20">20年</option>
+<option value="21">20年以上</option>
+</select>
+	</li>
+    <li><h4>所在单位</h4><input type="text" name="work_place" id="org" class="txt_style" /></li> 
+    <li><h4>擅长领域（1-3项）</h4>
+     <ul>
+     	      		<li><input type="checkbox" name="professional_field[]" class="txt_style" value="3" />商业模式</li>
+      	      		<li><input type="checkbox" name="professional_field[]" class="txt_style" value="4" />市场营销</li>
+      	      		<li><input type="checkbox" name="professional_field[]" class="txt_style" value="5" />人力资源</li>
+      	      		<li><input type="checkbox" name="professional_field[]" class="txt_style" value="6" />财务资本</li>
+      	      		<li><input type="checkbox" name="professional_field[]" class="txt_style" value="7" />互联网</li>
+      	      		<li><input type="checkbox" name="professional_field[]" class="txt_style" value="8" />生产研发</li>
+      	      		<li><input type="checkbox" name="professional_field[]" class="txt_style" value="9" />创业</li>
+      	      		<li><input type="checkbox" name="professional_field[]" class="txt_style" value="10" />修炼成长</li>
+      	     </ul>
+    </li>
+    <li><h4>课程名称/咨询主题</h4><input type="text" name="subject" class="txt_style" id="title"  /></li> 
+    <li><h4>你想怎样参与答赏会师大会</h4> 
+     <ul>
+     	      	<li><input type="radio" name="join_meeting" class="txt_style" value="1" checked />现场参加</li>
+      	      	<li><input type="radio" name="join_meeting" class="txt_style" value="2"  />网络直播</li>
+      	     </ul></li> 
+    <li><input type="submit" value="提交报名" /></li> 
+   </ul> 
+  </section>
+  </form>
+ </body>
+</html>

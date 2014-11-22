@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>手机验证</title>
+<link href="layout_2.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+	if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
+		var version = parseFloat(RegExp.$1);
+		if(version>2.3){
+			var phoneScale = parseInt(window.screen.width)/640;
+			document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+		}else{
+			document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+		}
+	}else{
+		document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	}
+    </script>
+</head>
+
+<body>
+<header>
+</header>
+<section>
+<ul class="first">
+<li><input type="text" value="" placeholder="请输入手机号码"></li>
+<li><input type="text" value="" placeholder="验证码"><button>获取验证码</button></li>
+<li><button>下一步</button></li>
+</ul>
+</section>
+</body>
+</html>

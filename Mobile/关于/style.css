@@ -1,0 +1,22 @@
+/* CSS Document */
+.logo{
+	text-align:center;
+	padding-top:20px;
+	margin-bottom:40px;}
+.logo img{
+	width:85px;
+	height:78px;
+	margin-bottom:20px;}
+.ui-content ul li{
+	line-height:1.5em;
+	margin-bottom:.55em;}
+.ui-content ul{
+	padding-left:1.4em;
+	color:#666666;}
+p{
+	color:#666666;}
+h1{
+	font-size:1.5em;
+	color:#333333;}
+h2{
+	font-size:1.2em}
